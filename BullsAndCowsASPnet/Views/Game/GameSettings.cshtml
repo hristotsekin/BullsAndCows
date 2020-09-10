@@ -1,0 +1,51 @@
+﻿@model BullsAndCowsASPnet.ViewModels.GameSettingsViewModel
+
+@{
+    ViewBag.Title = "GameSettings";
+}
+
+<div class="page-header">
+    <h2>Game Settings</h2>
+</div>
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(false, "", new { @class = "text-danger" })
+<div class="form-group">
+    <dl class="dl-horizontal">
+        <dt><label>@Html.DisplayNameFor(model => model.GameDifficulty) </label></dt>
+        <dd>
+            <p>
+                @Html.TextBoxFor(model => model.GameDifficulty, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.GameDifficulty, "", new { @class = "text-danger" })
+            </p>
+        </dd>
+
+        <dt><label>@Html.DisplayNameFor(model => model.HowManyDigits) </label></dt>
+        <dd>
+            <p>
+                @Html.TextBoxFor(model => model.HowManyDigits, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.HowManyDigits, "", new { @class = "text-danger" })
+            </p>
+        </dd>
+
+        <dt><label>@Html.DisplayNameFor(model => model.isIncludeZero) </label></dt>
+        <dd>
+            <p>
+                @Html.CheckBoxFor(model => model.isIncludeZero)
+                @Html.ValidationMessageFor(model => model.isIncludeZero, "", new { @class = "text-danger" })
+            </p>
+        </dd>
+
+    </dl>
+    
+    <div class="form-actions">
+
+        <input type="submit" value="Play" class="btn btn-success btn-sm" />
+    </div>
+</div>
+
+}
+

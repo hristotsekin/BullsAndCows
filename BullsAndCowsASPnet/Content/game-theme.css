@@ -1,0 +1,37 @@
+﻿
+
+
+body {
+    font-family: enlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+
+.vertical-align {
+    display: flex;
+    align-items: center;
+}
+
+.border-radius-1 {
+    border-radius: 5px;
+}
+.border-radius-2 {
+    border-radius: 5px;
+}
+.border-radius-3 {
+    border-radius: 5px;
+}
+.border-radius-4 {
+    border-radius: 5px;
+}
+.border-radius-5 {
+    border-radius: 5px;
+}
+
+.m-5 {
+    margin: 10px;
+}
+
+.p-5 {
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
